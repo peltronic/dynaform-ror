@@ -4,7 +4,22 @@ class FormcomponentsController < ApplicationController
   # GET /formcomponents
   # GET /formcomponents.json
   def index
-    @formcomponents = Formcomponent.all
+    #@formcomponents = Formcomponent.all
+    @formcomponents = [
+      {
+        :id => 1,
+        :created_at => 3,
+        :updated_at => 3,
+        :fcname => "foo"
+      },
+      {
+        :id => 2,
+        :created_at => 3,
+        :updated_at => 3,
+        :fcname => "foo"
+      }
+    ]
+
   end
 
   # GET /formcomponents/1
