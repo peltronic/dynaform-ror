@@ -7,10 +7,9 @@ class FormelementsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create formelement" do
-    post formelements_url, as: :json, params: { formelement: { fename: 'test FE' } }
+    post formelements_url, params: { formelement: { fename: 'test FE' } }, as: :json
     puts @response.body
     assert_response :success
-    #assert_redirected_to formelement_url(Formelement.last)
   end
 
 end

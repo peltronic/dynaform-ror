@@ -12,14 +12,20 @@ $ git push -u origin master
 
 ---
 
-$ rails generate scaffold Formcomponent fcname:string
 $ rake db:create
-$ rails db:migrate
+
+$ rails generate scaffold Formcomponent fcname:string
+$ rails g scaffold_controller Formelements
+# create Formelement model manually
 
 $ rails generate migration AddGuidToFormcomponents
+$ rails db:migrate
 
+(
 # $ rails db:rollback
 # $ rails destroy scaffold Formcomponent
+)
+
 
 ---
 
@@ -33,4 +39,10 @@ $ git push heroku master
 $ heroku pg
 $ heroku addons
 $ heroku config
+
+$ bundle add pg
+$ git add .gitignore Gemfile Gemfile.lock
+$ git commit -m "add pg to gemfile for heroku"
+$ bundle install
+
 $ heroku run rake db:migrate
