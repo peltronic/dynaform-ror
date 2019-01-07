@@ -20,3 +20,10 @@ $ rails generate migration AddGuidToFormcomponents
 
 # $ rails db:rollback
 # $ rails destroy scaffold Formcomponent
+
+---
+
+%%% HEROKU
+$ heroku create
+# https://stackoverflow.com/questions/15737296/heroku-push-rejected-failed-to-compile-ruby-rails-app
+$ git push heroku master
