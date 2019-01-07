@@ -1,0 +1,22 @@
+$ rails new dynaform-ror --api -d mysql
+$ cd dynaform-ror/
+
+$ mvim Gemfile
+$ bundle install
+
+$ git add .
+$ git commit -m "init commit"
+$ git remote add origin https://github.com/peltronic/dynaform-ror.git
+$ $ git remote -v
+$ git push -u origin master
+
+---
+
+$ rails generate scaffold Formcomponent fcname:string
+$ rake db:create
+$ rails db:migrate
+
+$ rails generate migration AddGuidToFormcomponents
+
+# $ rails db:rollback
+# $ rails destroy scaffold Formcomponent

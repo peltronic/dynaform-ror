@@ -1,0 +1,12 @@
+$ rails s
+
+$ rails t
+$ rails t test/controllers/formelements_controller_test.rb:19
+$ rails test:models
+
+$ rails console
+
+--
+
+$ vim Gemfile
+$ bundle instal
