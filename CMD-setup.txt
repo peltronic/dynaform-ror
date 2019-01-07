@@ -24,6 +24,13 @@ $ rails generate migration AddGuidToFormcomponents
 ---
 
 %%% HEROKU
+### https://devcenter.heroku.com/articles/git#creating-a-heroku-remote
+
 $ heroku create
 # https://stackoverflow.com/questions/15737296/heroku-push-rejected-failed-to-compile-ruby-rails-app
 $ git push heroku master
+
+$ heroku pg
+$ heroku addons
+$ heroku config
+$ heroku run rake db:migrate
