@@ -14,15 +14,6 @@ class FormelementsController < ApplicationController
   def show
   end
 
-  # GET /formelements/new
-  def new
-    @formelement = Formelement.new
-  end
-
-  # GET /formelements/1/edit
-  def edit
-  end
-
   # POST /formelements
   # POST /formelements.json
   # NOTE: nothing is stored in DB...basically it just creates a slug and returns obj
@@ -31,31 +22,16 @@ class FormelementsController < ApplicationController
     pp formelement_params
     @formelement = Formelement.new(formelement_params)
     #@formelement.slug = '12-my-foo-bar'
-
-    respond_to do |format|
-      if true
-        # equiv to save() succeed
-        format.html { redirect_to @formelement, notice: 'Formelement was successfully created.' }
-        format.json { render :show, status: :created, location: @formelement }
-      else
-        # equiv to save() fail
-        format.html { render :new }
-        format.json { render json: @formelement.errors, status: :unprocessable_entity }
-      end
-    end
+    render :show, status: :created, location: @formelement
   end
 
   # PATCH/PUT /formelements/1
   # PATCH/PUT /formelements/1.json
   def update
-    respond_to do |format|
-      if @formelement.update(formelement_params)
-        format.html { redirect_to @formelement, notice: 'Formelement was successfully updated.' }
-        format.json { render :show, status: :ok, location: @formelement }
-      else
-        format.html { render :edit }
-        format.json { render json: @formelement.errors, status: :unprocessable_entity }
-      end
+    if @formelement.update(formelement_params)
+      render :show, status: :ok, location: @formelement
+    else
+      render json: @formelement.errors, status: :unprocessable_entity
     end
   end
 
@@ -63,10 +39,6 @@ class FormelementsController < ApplicationController
   # DELETE /formelements/1.json
   def destroy
     @formelement.destroy
-    respond_to do |format|
-      format.html { redirect_to formelements_url, notice: 'Formelement was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private
