@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Formcomponent.create!([
+  { fcname: "FooBar" },
+  { fcname: "Personal Info" },
+  { fcname: "Billing Address" },
+  { fcname: "Qualifications" },
+  { fcname: "Hobbies" },
+  { fcname: "Skills" },
+  { fcname: "Education" }
+])
+ 
+p "Done"
