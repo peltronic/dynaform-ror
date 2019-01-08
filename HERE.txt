@@ -1,0 +1,12 @@
+
+%%% TUES
+[ ] vue UI :
+    [ ] create new fc
+    [ ] add fes to fc
+    [ ] edit fc
+    [ ] show fc
+    [ ] preview fc
+[ ] tests to fc.store, etc
+[ ] seeders for DB
+[ ] add cors for the vuejs frontend
+~ https://medium.com/@sfcooper/creating-an-app-with-rails-api-backend-vuejs-frontend-403d2df61dab

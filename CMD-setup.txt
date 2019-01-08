@@ -26,6 +26,7 @@ $ rails db:migrate
 # $ rails destroy scaffold Formcomponent
 )
 
+$ rake db:seed
 
 ---
 
@@ -46,3 +47,4 @@ $ git commit -m "add pg to gemfile for heroku"
 $ bundle install
 
 $ heroku run rake db:migrate
+$ heroku run rake db:seed
